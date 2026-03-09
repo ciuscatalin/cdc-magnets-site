@@ -130,26 +130,34 @@ export default function CdcCraftsMagnetsSite() {
 				  <h3 className="text-2xl font-semibold">{product.title}</h3>
 				  <div className="mt-2 text-lg font-medium text-neutral-600">{product.size}</div>
 
-				  <div className="mt-4 flex justify-center items-center">
-
+				  <div className="mt-5 flex justify-center items-center">
 					  {product.size === "50 × 50 mm" && (
-						<div className="flex items-center justify-center rounded-lg bg-neutral-200 shadow-inner"
-						  style={{ width: "100px", height: "100px" }}>
-						  <span className="text-sm font-semibold text-neutral-700">
-							50×50
-						  </span>
+						<div className="relative flex items-center justify-center">
+						  <div
+							className="relative flex items-center justify-center rounded-[14px] border border-neutral-200 bg-white shadow-[0_12px_30px_rgba(0,0,0,0.10)]"
+							style={{ width: "108px", height: "108px" }}
+						  >
+							<div className="pointer-events-none absolute inset-x-3 top-2 h-5 rounded-full bg-white/70 blur-md" />
+							<span className="relative z-10 text-sm font-semibold text-neutral-700">
+							  50 × 50
+							</span>
+						  </div>
 						</div>
 					  )}
 
 					  {product.size === "80 × 53 mm" && (
-						<div className="flex items-center justify-center rounded-lg bg-neutral-200 shadow-inner"
-						  style={{ width: "160px", height: "106px" }}>
-						  <span className="text-sm font-semibold text-neutral-700">
-							80×53
-						  </span>
+						<div className="relative flex items-center justify-center">
+						  <div
+							className="relative flex items-center justify-center rounded-[14px] border border-neutral-200 bg-white shadow-[0_12px_30px_rgba(0,0,0,0.10)]"
+							style={{ width: "150px", height: "100px" }}
+						  >
+							<div className="pointer-events-none absolute inset-x-4 top-2 h-5 rounded-full bg-white/70 blur-md" />
+							<span className="relative z-10 text-sm font-semibold text-neutral-700">
+							  80 × 53
+							</span>
+						  </div>
 						</div>
 					  )}
-
 					</div>
 
 				  <p className="mt-4 text-sm leading-7 text-neutral-600">
@@ -217,6 +225,15 @@ export default function CdcCraftsMagnetsSite() {
           </div>
         </div>
       </section>
-    </div>
+	<a
+	  href="https://wa.me/40748401702?text=Buna,%20sunt%20interesat%20de%20magneți%20personalizați."
+	  target="_blank"
+	  rel="noopener noreferrer"
+	  className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-green-600 transition"
+	>
+	  WhatsApp
+	</a>
+	
+	</div>
   );
 }
