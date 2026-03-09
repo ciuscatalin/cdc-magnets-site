@@ -31,25 +31,25 @@ export default function CdcCraftsMagnetsSite() {
   ];
 
   const gallery = [
-    {
-      title: "Beclean minimalist",
-      subtitle: "Design modern tip hartă",
-      image:
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-    },
-    {
-      title: "Băile Figa",
-      subtitle: "Stil foto / suvenir turistic",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80",
-    },
-    {
-      title: "Colaj local",
-      subtitle: "Mai multe cadre într-un singur magnet",
-      image:
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
-    },
-  ];
+	  {
+		title: "Portret",
+		subtitle: "Magnet cu fotografie tip portret",
+		image:
+		  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80",
+	  },
+	  {
+		title: "Turistic",
+		subtitle: "Destinații turistice și centre balneare",
+		image:
+		  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
+	  },
+	  {
+		title: "Business",
+		subtitle: "Magnet personalizat pentru firme și branding",
+		image:
+		  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80",
+	  },
+	];
 
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
@@ -183,15 +183,15 @@ export default function CdcCraftsMagnetsSite() {
             <div className="space-y-5 text-sm leading-7 text-neutral-700">
               <div>
                 <div className="font-semibold text-neutral-900">Instagram</div>
-                <div>@3dprints_cdc</div>
+                <div>@3d_prints_cdc</div>
               </div>
               <div>
                 <div className="font-semibold text-neutral-900">Telefon</div>
-                <div>07xx xxx xxx</div>
+                <div>0748 401 702</div>
               </div>
               <div>
                 <div className="font-semibold text-neutral-900">Email</div>
-                <div>contact@cdccrafts.ro</div>
+                <div>ciuscatalin@gmail.com</div>
               </div>
               <div>
                 <div className="font-semibold text-neutral-900">Locație</div>
