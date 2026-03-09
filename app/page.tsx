@@ -86,48 +86,24 @@ export default function CdcCraftsMagnetsSite() {
 				</div>
 			  </div>
 
-			  <div className="grid gap-4 sm:grid-cols-2">
-				<div className="rounded-[2rem] bg-neutral-900 p-5 text-white shadow-xl">
-				  <div className="mb-8 text-sm uppercase tracking-[0.2em] text-neutral-300">
-					Formate disponibile
-				  </div>
-
-				  <div className="space-y-4">
-					<div className="rounded-2xl bg-white/10 p-4">
-					  <div className="text-sm text-neutral-300">Standard</div>
-					  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
-					</div>
-
-					<div className="rounded-2xl bg-white/10 p-4">
-					  <div className="text-sm text-neutral-300">Premium</div>
-					  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
-					</div>
-
-					<div className="rounded-2xl bg-white/10 p-4">
-					  <div className="text-sm text-neutral-300">Premium Large</div>
-					  <div className="mt-1 text-2xl font-semibold">80 × 53 mm</div>
-					</div>
-				  </div>
+			  <div className="flex justify-start md:justify-end">
+			  <div className="w-full max-w-md rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-lg">
+				<div className="mb-5 text-sm uppercase tracking-[0.2em] text-neutral-500">
+				  Avantaje
 				</div>
-				</div>
-
-				<div className="rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-lg">
-				  <div className="mb-5 text-sm uppercase tracking-[0.2em] text-neutral-500">
-					Avantaje
-				  </div>
-				  <div className="space-y-3">
-					{highlights.map((item) => (
-					  <div
-						key={item}
-						className="rounded-2xl bg-neutral-100 px-4 py-3 text-sm leading-6 text-neutral-700"
-					  >
-						{item}
-					  </div>
-					))}
-				  </div>
+				<div className="space-y-3">
+				  {highlights.map((item) => (
+					<div
+					  key={item}
+					  className="rounded-2xl bg-neutral-100 px-4 py-3 text-sm leading-6 text-neutral-700"
+					>
+					  {item}
+					</div>
+				  ))}
 				</div>
 			  </div>
-
+			</div>
+			</div>	
 		</section>
 
 		<section id="produse" className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
