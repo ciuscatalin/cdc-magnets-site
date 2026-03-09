@@ -64,11 +64,11 @@ export default function CdcCraftsMagnetsSite() {
 				  CDC Crafts · Magneți suvenir
 				</div>
 				<h1 className="max-w-xl text-4xl font-bold tracking-tight md:text-5xl">
-				  Magneți personalizați pentru Beclean și Băile Figa
+				  Magneți personalizați pentru suveniruri, business și evenimente
 				</h1>
 				<p className="mt-5 max-w-xl text-base leading-7 text-neutral-600 md:text-lg">
-				  Pagină de prezentare pentru magneți suvenir realizați local, în formate standard și premium.
-				  Potriviți pentru magazine, pensiuni, recepții și puncte turistice.
+				  Pagină de prezentare pentru magneți personalizați realizați în mai multe formate,
+				  potriviți pentru suveniruri, promovare, branding, cadouri sau evenimente speciale.
 				</p>
 				<div className="mt-7 flex flex-wrap gap-3">
 				  <a
@@ -92,37 +92,23 @@ export default function CdcCraftsMagnetsSite() {
 					Formate disponibile
 				  </div>
 
-				  <div className="flex flex-wrap gap-6">
-					<div className="flex flex-col items-center">
-					  <div className="flex aspect-square w-28 items-center justify-center rounded-xl bg-white/10 text-center">
-						<div>
-						  <div className="text-sm text-neutral-300">Standard</div>
-						  <div className="text-lg font-semibold">50 × 50</div>
-						</div>
-					  </div>
+				  <div className="space-y-4">
+					<div className="rounded-2xl bg-white/10 p-4">
+					  <div className="text-sm text-neutral-300">Standard</div>
+					  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
 					</div>
 
-					<div className="flex flex-col items-center">
-					  <div className="flex aspect-square w-28 items-center justify-center rounded-xl bg-white/10 text-center">
-						<div>
-						  <div className="text-sm text-neutral-300">Premium</div>
-						  <div className="text-lg font-semibold">50 × 50</div>
-						</div>
-					  </div>
+					<div className="rounded-2xl bg-white/10 p-4">
+					  <div className="text-sm text-neutral-300">Premium</div>
+					  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
 					</div>
 
-					<div className="flex flex-col items-center">
-					  <div
-						className="flex w-36 items-center justify-center rounded-xl bg-white/10 text-center"
-						style={{ aspectRatio: "80 / 53" }}
-					  >
-						<div>
-						  <div className="text-sm text-neutral-300">Premium Large</div>
-						  <div className="text-lg font-semibold">80 × 53</div>
-						</div>
-					  </div>
+					<div className="rounded-2xl bg-white/10 p-4">
+					  <div className="text-sm text-neutral-300">Premium Large</div>
+					  <div className="mt-1 text-2xl font-semibold">80 × 53 mm</div>
 					</div>
 				  </div>
+				</div>
 				</div>
 
 				<div className="rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-lg">
