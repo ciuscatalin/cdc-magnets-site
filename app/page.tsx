@@ -168,12 +168,27 @@ export default function CdcCraftsMagnetsSite() {
 				  <h3 className="text-2xl font-semibold">{product.title}</h3>
 				  <div className="mt-2 text-lg font-medium text-neutral-600">{product.size}</div>
 
-				  <div className="mt-4 flex justify-center">
-					<div
-					  className="rounded-lg bg-neutral-200 shadow-inner"
-					  style={{ width: "120px", aspectRatio: product.ratio }}
-					/>
-				  </div>
+				  <div className="mt-4 flex justify-center items-center">
+
+					  {product.size === "50 × 50 mm" && (
+						<div className="flex items-center justify-center rounded-lg bg-neutral-200 shadow-inner"
+						  style={{ width: "100px", height: "100px" }}>
+						  <span className="text-sm font-semibold text-neutral-700">
+							50×50
+						  </span>
+						</div>
+					  )}
+
+					  {product.size === "80 × 53 mm" && (
+						<div className="flex items-center justify-center rounded-lg bg-neutral-200 shadow-inner"
+						  style={{ width: "160px", height: "106px" }}>
+						  <span className="text-sm font-semibold text-neutral-700">
+							80×53
+						  </span>
+						</div>
+					  )}
+
+					</div>
 
 				  <p className="mt-4 text-sm leading-7 text-neutral-600">
 					{product.description}
