@@ -127,7 +127,7 @@ export default function CdcCraftsMagnetsSite() {
 				  </div>
 				</div>
 			  </div>
-			</div>
+
 		</section>
 
 		<section id="produse" className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
