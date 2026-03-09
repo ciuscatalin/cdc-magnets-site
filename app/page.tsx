@@ -1,65 +1,206 @@
-import Image from "next/image";
+export default function CdcCraftsMagnetsSite() {
+  const products = [
+    {
+      title: "Magnet Standard",
+      size: "50 × 50 mm",
+      description:
+        "Format pătrat, ideal pentru suveniruri accesibile, serii turistice și modele simple cu fotografie sau design minimalist.",
+      badge: "Standard",
+    },
+    {
+      title: "Magnet Premium",
+      size: "50 × 50 mm",
+      description:
+        "Format pătrat premium, cu aspect mai elegant și prezentare mai bună pentru magazine, pensiuni și puncte turistice.",
+      badge: "Premium",
+    },
+    {
+      title: "Magnet Premium Large",
+      size: "80 × 53 mm",
+      description:
+        "Format dreptunghiular, perfect pentru imagini mai ample, colaje sau cadre reprezentative din Beclean și Băile Figa.",
+      badge: "Premium Large",
+    },
+  ];
 
-export default function Home() {
+  const highlights = [
+    "Imagini locale din Beclean și Băile Figa",
+    "Producție locală și loturi mici sau mari",
+    "Posibilitate de personalizare pentru magazine și pensiuni",
+    "Design modern, potrivit pentru suveniruri turistice",
+  ];
+
+  const gallery = [
+    {
+      title: "Beclean minimalist",
+      subtitle: "Design modern tip hartă",
+      image:
+        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    },
+    {
+      title: "Băile Figa",
+      subtitle: "Stil foto / suvenir turistic",
+      image:
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80",
+    },
+    {
+      title: "Colaj local",
+      subtitle: "Mai multe cadre într-un singur magnet",
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-neutral-50 text-neutral-900">
+      <section className="relative overflow-hidden border-b bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 via-white to-neutral-200" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2 md:px-10 lg:px-12">
+          <div className="flex flex-col justify-center">
+            <div className="mb-4 inline-flex w-fit items-center rounded-full border border-neutral-300 bg-white px-4 py-1 text-sm shadow-sm">
+              CDC Crafts · Magneți suvenir
+            </div>
+            <h1 className="max-w-xl text-4xl font-bold tracking-tight md:text-5xl">
+              Magneți personalizați pentru Beclean și Băile Figa
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-7 text-neutral-600 md:text-lg">
+              Pagină de prezentare pentru magneți suvenir realizați local, în formate standard și premium.
+              Potriviți pentru magazine, pensiuni, recepții și puncte turistice.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href="#produse"
+                className="rounded-2xl bg-neutral-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:scale-[1.02]"
+              >
+                Vezi produsele
+              </a>
+              <a
+                href="#contact"
+                className="rounded-2xl border border-neutral-300 bg-white px-5 py-3 text-sm font-medium text-neutral-900 shadow-sm transition hover:bg-neutral-100"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-[2rem] bg-neutral-900 p-5 text-white shadow-xl">
+              <div className="mb-8 text-sm uppercase tracking-[0.2em] text-neutral-300">Formate disponibile</div>
+              <div className="space-y-4">
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <div className="text-sm text-neutral-300">Standard</div>
+                  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
+                </div>
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <div className="text-sm text-neutral-300">Premium</div>
+                  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
+                </div>
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <div className="text-sm text-neutral-300">Premium Large</div>
+                  <div className="mt-1 text-2xl font-semibold">80 × 53 mm</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-lg">
+              <div className="mb-5 text-sm uppercase tracking-[0.2em] text-neutral-500">Avantaje</div>
+              <div className="space-y-3">
+                {highlights.map((item) => (
+                  <div key={item} className="rounded-2xl bg-neutral-100 px-4 py-3 text-sm leading-6 text-neutral-700">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="produse" className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
+        <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">Produse</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight">Dimensiuni disponibile</h2>
+          </div>
+          <p className="max-w-2xl text-sm leading-6 text-neutral-600 md:text-base">
+            Prezentare simplă și clară pentru parteneri sau clienți care vor să vadă rapid diferențele dintre modelele disponibile.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {products.map((product) => (
+            <div key={product.title} className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 inline-flex rounded-full bg-neutral-900 px-3 py-1 text-xs font-medium text-white">
+                {product.badge}
+              </div>
+              <h3 className="text-2xl font-semibold">{product.title}</h3>
+              <div className="mt-2 text-lg font-medium text-neutral-600">{product.size}</div>
+              <p className="mt-4 text-sm leading-7 text-neutral-600">{product.description}</p>
+            </div>
+          ))}
         </div>
-      </main>
+      </section>
+
+      <section className="border-y bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
+          <div className="mb-8">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">Galerie</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight">Exemple de stil</h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {gallery.map((item) => (
+              <div key={item.title} className="overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-50 shadow-sm">
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-300 hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm text-neutral-600">{item.subtitle}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
+        <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
+          <div className="rounded-[2rem] bg-neutral-900 p-8 text-white shadow-xl">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-300">Contact</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight">Hai să discutăm despre magneții tăi</h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-neutral-300 md:text-base">
+              Pot realiza modele pentru suveniruri turistice, serii personalizate, colaborări cu pensiuni,
+              magazine sau comenzi speciale pentru evenimente.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-neutral-200 bg-white p-8 shadow-sm">
+            <div className="space-y-5 text-sm leading-7 text-neutral-700">
+              <div>
+                <div className="font-semibold text-neutral-900">Instagram</div>
+                <div>@3dprints_cdc</div>
+              </div>
+              <div>
+                <div className="font-semibold text-neutral-900">Telefon</div>
+                <div>07xx xxx xxx</div>
+              </div>
+              <div>
+                <div className="font-semibold text-neutral-900">Email</div>
+                <div>contact@cdccrafts.ro</div>
+              </div>
+              <div>
+                <div className="font-semibold text-neutral-900">Locație</div>
+                <div>Beclean, Bistrița-Năsăud</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
