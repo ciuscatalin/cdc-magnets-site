@@ -86,20 +86,38 @@ export default function CdcCraftsMagnetsSite() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-[2rem] bg-neutral-900 p-5 text-white shadow-xl">
               <div className="mb-8 text-sm uppercase tracking-[0.2em] text-neutral-300">Formate disponibile</div>
-              <div className="space-y-4">
-                <div className="rounded-2xl bg-white/10 p-4">
-                  <div className="text-sm text-neutral-300">Standard</div>
-                  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
-                </div>
-                <div className="rounded-2xl bg-white/10 p-4">
-                  <div className="text-sm text-neutral-300">Premium</div>
-                  <div className="mt-1 text-2xl font-semibold">50 × 50 mm</div>
-                </div>
-                <div className="rounded-2xl bg-white/10 p-4">
-                  <div className="text-sm text-neutral-300">Premium Large</div>
-                  <div className="mt-1 text-2xl font-semibold">80 × 53 mm</div>
-                </div>
-              </div>
+              <div className="flex flex-wrap gap-6">
+				  <div className="flex flex-col items-center">
+					<div className="aspect-square w-28 rounded-xl bg-white/10 flex items-center justify-center text-center">
+					  <div>
+						<div className="text-sm text-neutral-300">Standard</div>
+						<div className="text-lg font-semibold">50 × 50</div>
+					  </div>
+					</div>
+				  </div>
+
+				  <div className="flex flex-col items-center">
+					<div className="aspect-square w-28 rounded-xl bg-white/10 flex items-center justify-center text-center">
+					  <div>
+						<div className="text-sm text-neutral-300">Premium</div>
+						<div className="text-lg font-semibold">50 × 50</div>
+					  </div>
+					</div>
+				  </div>
+
+				  <div className="flex flex-col items-center">
+					<div
+					  className="w-36 rounded-xl bg-white/10 flex items-center justify-center text-center"
+					  style={{ aspectRatio: "80 / 53" }}
+					>
+					  <div>
+						<div className="text-sm text-neutral-300">Premium Large</div>
+						<div className="text-lg font-semibold">80 × 53</div>
+					  </div>
+					</div>
+				  </div>
+
+				</div>
             </div>
 
             <div className="rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-lg">
