@@ -23,7 +23,7 @@ export default function GaleriePage() {
       image: "/images/magnet-bai.png",
     },
     {
-      title: "Lăc Sărat",
+      title: "Lac Sărat",
       category: "Turistic",
       image: "/images/magnet-piscina.png",
     },
