@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -28,18 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-50 text-neutral-900`}
       >
         {/* Navbar */}
-        <header className="border-b border-neutral-200 bg-white/95 backdrop-blur">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-12">
-            <div className="text-lg font-semibold text-neutral-900">CDC Crafts</div>
-
-            <nav className="flex items-center gap-6 text-sm font-medium text-neutral-600">
-              <a href="/" className="transition hover:text-neutral-900">Home</a>
-              <a href="/produse" className="transition hover:text-neutral-900">Produse</a>
-              <a href="/galerie" className="transition hover:text-neutral-900">Galerie</a>
-              <a href="/contact" className="transition hover:text-neutral-900">Contact</a>
-            </nav>
-          </div>
-        </header>
+        <Navbar />
 
         {/* Page content */}
         <main>{children}</main>
