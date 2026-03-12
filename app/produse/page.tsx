@@ -78,13 +78,63 @@ export default function ProdusePage() {
                 </div>
               )}
             </div>
+            
 
+            
             <p className="mt-4 text-sm leading-7 text-neutral-600">
               {product.description}
-            </p>
+            </p> 
           </div>
         ))}
       </div>
+      
+      <section className="mt-12 rounded-[2rem] bg-neutral-50 p-8 md:p-10">
+        <div className="mb-8">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+            Cum comanzi
+          </p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-neutral-900">
+            Comandă simplu, în 3 pași
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-neutral-600 md:text-base">
+            Procesul este rapid și ușor, indiferent dacă dorești un magnet pentru familie,
+            un cadou personalizat sau o comandă pentru evenimente și colaborări.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
+              1
+            </div>
+            <h3 className="text-2xl font-semibold text-neutral-900">Trimiți fotografia sau ideea</h3>
+            <p className="mt-3 text-sm leading-7 text-neutral-600">
+              Poți trimite o fotografie, un design, un colaj sau doar ideea de la care vrei să pornim.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
+              2
+            </div>
+            <h3 className="text-2xl font-semibold text-neutral-900">Alegi formatul potrivit</h3>
+            <p className="mt-3 text-sm leading-7 text-neutral-600">
+              Stabilim împreună dimensiunea, tipul magnetului și varianta potrivită pentru comandă.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
+              3
+            </div>
+            <h3 className="text-2xl font-semibold text-neutral-900">Primești magnetul personalizat</h3>
+            <p className="mt-3 text-sm leading-7 text-neutral-600">
+              După confirmare, magnetul este realizat și pregătit pentru livrare sau predare.
+            </p>
+          </div>
+        </div>
+      </section>
+      
     </div>
   );
 }

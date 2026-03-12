@@ -25,22 +25,20 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <section className="relative overflow-hidden border-b bg-neutral-50">
-  		<div className="absolute inset-0 bg-gradient-to-br from-white via-neutral-50 to-neutral-100" />
-
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:px-10 lg:px-12">
+  		  <div className="absolute inset-0 bg-gradient-to-br from-white via-neutral-50 to-neutral-100" />
+          <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:px-10 lg:px-12">
           <div className="flex flex-col justify-center">
             <div className="mb-4 inline-flex w-fit items-center rounded-full border border-neutral-200 bg-white px-4 py-1 text-sm font-medium text-neutral-700 shadow-sm">
               CDC Crafts · Magneți personalizați
             </div>
 
+            <h1 className="max-w-xl text-4xl font-bold tracking-tight text-neutral-950 md:text-5xl">
+              Magneți personalizați pentru suveniruri, evenimente și fotografii speciale
+            </h1>   
+
             <p className="mt-5 max-w-xl text-base leading-8 text-neutral-700 md:text-lg">
               Realizați în mai multe formate, potriviți pentru familie, botez, nuntă,
               suveniruri turistice sau comenzi personalizate pentru magazine și evenimente.
-            </p>
-
-            <p className="mt-5 max-w-xl text-base leading-8 text-neutral-700 md:text-lg">
-              Realizați în mai multe formate, potriviți pentru fotografii de familie,
-              botez, nuntă, suveniruri turistice sau colaborări cu magazine și pensiuni.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -61,28 +59,35 @@ export default function HomePage() {
           </div>
 
           <div className="flex justify-start md:justify-end">
-            <div className="w-full max-w-md rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
-              <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-neutral-600">
-                Avantaje
-              </div>
+            <div className="w-full max-w-md">
+              <div className="mt-6 overflow-hidden rounded-[2rem] border border-neutral-200 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
+                <div className="relative aspect-square bg-neutral-100">
+                  <Image
+                    src="/images/magnet-nunta-cuplu.png"
+                    alt="Magnet personalizat familie"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
-              <div className="space-y-3">
-                {highlights.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl bg-neutral-100 px-4 py-3 text-sm leading-6 text-neutral-700"
-                  >
-                    {item}
+                <div className="p-5">
+                  <div className="mb-2 inline-flex rounded-full bg-neutral-900 px-3 py-1 text-xs font-medium text-white">
+                    Exemplu real
                   </div>
-                ))}
+                  <h3 className="text-xl font-semibold text-neutral-900">
+                    Magnet personalizat
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-neutral-600">
+                    Fotografiile preferate pot fi transformate în magneți potriviți pentru familie, cadouri sau evenimente speciale.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-      <section className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
+      <section className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-12">
         <div className="mb-8">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
             Navigare rapidă
@@ -97,7 +102,7 @@ export default function HomePage() {
             href="/produse"
             className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
           >
-            <h3 className="text-2xl font-semibold">Produse</h3>
+            <h3 className="text-xl font-semibold">Produse</h3>
             <p className="mt-3 text-sm leading-7 text-neutral-600">
               Vezi dimensiunile disponibile și alege formatul potrivit pentru magnetul tău personalizat.
             </p>
@@ -107,7 +112,7 @@ export default function HomePage() {
             href="/galerie"
             className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
           >
-            <h3 className="text-2xl font-semibold">Galerie</h3>
+            <h3 className="text-xl font-semibold">Galerie</h3>
             <p className="mt-3 text-sm leading-7 text-neutral-600">
               Descoperă exemple reale de magneți realizați pentru familie, botez, nuntă și suveniruri turistice.
             </p>
@@ -117,7 +122,7 @@ export default function HomePage() {
             href="/contact"
             className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
           >
-            <h3 className="text-2xl font-semibold">Contact</h3>
+            <h3 className="text-xl font-semibold">Contact</h3>
             <p className="mt-3 text-sm leading-7 text-neutral-600">
               Contactează-mă pentru comenzi personalizate, colaborări și oferte pentru magazine sau evenimente.
             </p>
@@ -170,53 +175,6 @@ export default function HomePage() {
           >
             Vezi galeria completă
           </a>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 pb-14 md:px-10 lg:px-12">
-        <div className="mb-8">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
-            Cum comanzi
-          </p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-neutral-900">
-            Comandă simplu, în 3 pași
-          </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-neutral-600 md:text-base">
-            Procesul este rapid și ușor, indiferent dacă dorești un magnet pentru familie,
-            un cadou personalizat sau o comandă pentru evenimente și colaborări.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm">
-            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
-              1
-            </div>
-            <h3 className="text-2xl font-semibold text-neutral-900">Trimiți fotografia sau ideea</h3>
-            <p className="mt-3 text-sm leading-7 text-neutral-600">
-              Poți trimite o fotografie, un design, un colaj sau doar ideea de la care vrei să pornim.
-            </p>
-          </div>
-
-          <div className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm">
-            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
-              2
-            </div>
-            <h3 className="text-2xl font-semibold text-neutral-900">Alegi formatul potrivit</h3>
-            <p className="mt-3 text-sm leading-7 text-neutral-600">
-              Stabilim împreună dimensiunea, tipul magnetului și varianta potrivită pentru comandă.
-            </p>
-          </div>
-
-          <div className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm">
-            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
-              3
-            </div>
-            <h3 className="text-2xl font-semibold text-neutral-900">Primești magnetul personalizat</h3>
-            <p className="mt-3 text-sm leading-7 text-neutral-600">
-              După confirmare, magnetul este realizat și pregătit pentru livrare sau predare.
-            </p>
-          </div>
         </div>
       </section>
     </div>
