@@ -63,7 +63,7 @@ export default function HomePage() {
               <div className="mt-6 overflow-hidden rounded-[2rem] border border-neutral-200 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
                 <div className="relative aspect-square bg-neutral-100">
                   <Image
-                    src="/images/magnet-nunta-cuplu.png"
+                    src="/images/magnet-familie-natura.png"
                     alt="Magnet personalizat familie"
                     fill
                     className="object-cover"
