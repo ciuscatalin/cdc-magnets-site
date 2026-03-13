@@ -10,15 +10,15 @@ export default function HomePage() {
   const previewGallery = [
   {
     title: "Magnet familie",
-    image: "/images/magnet-familie-generatii.png",
+    image: "/images/main_page/m2.png",
   },
   {
     title: "Magnet turistic",
-    image: "/images/magnet-bai.png",
+    image: "/images/main_page/m3.png",
   },
   {
     title: "Magnet nuntă",
-    image: "/images/magnet-nunta-cuplu.png",
+    image: "/images/main_page/m4.png",
   },
   ];
 
@@ -63,7 +63,7 @@ export default function HomePage() {
               <div className="mt-6 overflow-hidden rounded-[2rem] border border-neutral-200 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
                 <div className="relative aspect-square bg-neutral-100">
                   <Image
-                    src="/images/magnet-familie-natura.png"
+                    src="/images/main_page/m1.png"
                     alt="Magnet personalizat familie"
                     fill
                     className="object-cover"
