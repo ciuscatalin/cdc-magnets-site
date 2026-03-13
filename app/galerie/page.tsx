@@ -6,10 +6,16 @@ import { useEffect, useState } from "react";
 export default function GaleriePage() {
   const galleryItems = [
     {
-      title: "Generații în Familie",
-      category: "Familie",
-      size: "50x50",
-      image: "/images/50x50/m1.png",
+      title: "Apus montan",
+      category: "Peisaj",
+      size: "80x53",
+      image: "/images/80x53/m1.png",
+    },
+    {
+      title: "Cuplu în natură",
+      category: "Nuntă",
+      size: "80x53",
+      image: "/images/80x53/m5.png",
     },
     {
       title: "Botez bebe",
@@ -18,34 +24,28 @@ export default function GaleriePage() {
       image: "/images/50x50/m2.png",
     },
     {
+      title: "Oraș european",
+      category: "Oraș",
+      size: "80x53",
+      image: "/images/80x53/m6.png",
+    },
+    {
       title: "Nuntă cuplu",
       category: "Nuntă",
       size: "50x50",
       image: "/images/50x50/m3.png",
     },
     {
+      title: "Stradă istorică",
+      category: "Oraș",
+      size: "80x53",
+      image: "/images/80x53/m7.png",
+    },
+    {
       title: "Mamă și copil",
       category: "Familie",
       size: "50x50",
       image: "/images/50x50/m4.png",
-    },
-    {
-      title: "Lac natural",
-      category: "Turistic",
-      size: "50x50",
-      image: "/images/50x50/m5.png",
-    },
-    {
-      title: "Stațiune balneară",
-      category: "Turistic",
-      size: "50x50",
-      image: "/images/50x50/m6.png",
-    },
-    {
-      title: "Apus montan",
-      category: "Peisaj",
-      size: "80x53",
-      image: "/images/80x53/m1.png",
     },
     {
       title: "Familie portret",
@@ -60,28 +60,16 @@ export default function GaleriePage() {
       image: "/images/80x53/m3.png",
     },
     {
-      title: "Cuplu în natură",
-      category: "Nuntă",
-      size: "80x53",
-      image: "/images/80x53/m5.png",
-    },
-    {
-      title: "Oraș european",
-      category: "Oraș",
-      size: "80x53",
-      image: "/images/80x53/m6.png",
-    },
-    {
-      title: "Stradă istorică",
-      category: "Oraș",
-      size: "80x53",
-      image: "/images/80x53/m7.png",
-    },
-    {
       title: "Dealuri și lumină",
       category: "Peisaj",
       size: "80x53",
       image: "/images/80x53/m8.png",
+    },
+    {
+      title: "Generații în Familie",
+      category: "Familie",
+      size: "50x50",
+      image: "/images/50x50/m1.png",
     },
     {
       title: "Siluetă la apus",
@@ -90,10 +78,22 @@ export default function GaleriePage() {
       image: "/images/80x53/m9.png",
     },
     {
+      title: "Lac natural",
+      category: "Turistic",
+      size: "50x50",
+      image: "/images/50x50/m5.png",
+    },
+    {
       title: "Răsărit peste nori",
       category: "Peisaj",
       size: "80x53",
       image: "/images/80x53/m10.png",
+    },
+    {
+      title: "Stațiune balneară",
+      category: "Turistic",
+      size: "50x50",
+      image: "/images/50x50/m6.png",
     },
   ];
 

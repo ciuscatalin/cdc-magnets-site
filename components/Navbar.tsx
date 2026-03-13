@@ -11,7 +11,7 @@ export default function Navbar() {
       : "text-neutral-600 hover:text-neutral-900";
 
   return (
-    <header className="border-b border-neutral-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-12">
         <Link
           href="/"
@@ -21,21 +21,21 @@ export default function Navbar() {
         </Link>
 
         <nav className="flex items-center gap-6 text-sm">
-          <a href="/" className={linkClass("/")}>
+          <Link href="/" className={linkClass("/")}>
             Home
-          </a>
+          </Link>
 
-          <a href="/produse" className={linkClass("/produse")}>
+          <Link href="/produse" className={linkClass("/produse")}>
             Produse
-          </a>
+          </Link>
 
-          <a href="/galerie" className={linkClass("/galerie")}>
+          <Link href="/galerie" className={linkClass("/galerie")}>
             Galerie
-          </a>
+          </Link>
 
-          <a href="/contact" className={linkClass("/contact")}>
+          <Link href="/contact" className={linkClass("/contact")}>
             Contact
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
