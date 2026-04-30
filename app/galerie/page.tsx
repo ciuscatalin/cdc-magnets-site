@@ -19,30 +19,6 @@ export default function GaleriePage() {
       image: "/images/50x50/m1.png",
     },
     {
-      title: "Magnet 50 × 50",
-      category: "Premium",
-      size: "50x50",
-      image: "/images/50x50/m2.png",
-    },
-    {
-      title: "Magnet 50 × 50",
-      category: "Premium",
-      size: "50x50",
-      image: "/images/50x50/m3.png",
-    },
-    {
-      title: "Magnet 63 × 63",
-      category: "Premium",
-      size: "63x63",
-      image: "/images/63x63/m1.png",
-    },
-    {
-      title: "Magnet 63 × 63",
-      category: "Premium",
-      size: "63x63",
-      image: "/images/63x63/m2.png",
-    },
-    {
       title: "Magnet 63 × 63",
       category: "Premium",
       size: "63x63",
@@ -55,10 +31,35 @@ export default function GaleriePage() {
       image: "/images/80x53/m1.png",
     },
     {
+      title: "Magnet 50 × 50",
+      category: "Premium",
+      size: "50x50",
+      image: "/images/50x50/m2.png",
+    },
+    {
+      title: "Magnet 63 × 63",
+      category: "Premium",
+      size: "63x63",
+      image: "/images/63x63/m2.png",
+    },
+    
+    {
       title: "Magnet 80 × 53",
       category: "Premium Large",
       size: "80x53",
       image: "/images/80x53/m2.png",
+    },
+    {
+      title: "Magnet 50 × 50",
+      category: "Premium",
+      size: "50x50",
+      image: "/images/50x50/m3.png",
+    },
+    {
+      title: "Magnet 63 × 63",
+      category: "Premium",
+      size: "63x63",
+      image: "/images/63x63/m1.png",
     },
     {
       title: "Magnet 80 × 53",
