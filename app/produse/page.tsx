@@ -1,28 +1,43 @@
 import Image from "next/image";
 
 export default function ProdusePage() {
+  const getSizeClass = (size: string) => {
+    if (size === "50 × 50 mm") {
+      return "h-[200px] w-[200px]";
+    }
+
+    if (size === "63 × 63 mm") {
+      return "h-[252px] w-[252px]"; // 200 * 1.26
+    }
+
+    if (size === "80 × 53 mm") {
+      return "h-[212px] w-[320px]"; // păstrăm raportul 80:53 (~1.5)
+    }
+
+    return "";
+  };  
   const products = [
-    {
-      title: "Magnet Standard",
-      size: "50 × 50 mm",
-      description:
-        "Format pătrat, ideal pentru suveniruri accesibile, serii turistice și modele simple cu fotografie sau design minimalist.",
-      badge: "Standard",
-      preview: "/images/50x50_standard/m4.png",
-    },
     {
       title: "Magnet Premium",
       size: "50 × 50 mm",
       description:
-        "Format pătrat premium, cu aspect mai elegant și prezentare mai bună pentru magazine, pensiuni și puncte turistice.",
+        "Format pătrat premium, potrivit pentru fotografii, suveniruri, evenimente și modele personalizate cu aspect elegant.",
       badge: "Premium",
       preview: "/images/50x50/m2.png",
+    },
+    {
+      title: "Magnet Premium",
+      size: "63 × 63 mm",
+      description:
+        "Format pătrat premium, mai generos, ideal pentru fotografii cu mai multe detalii, suveniruri sau designuri personalizate.",
+      badge: "Premium",
+      preview: "/images/63x63/m3.png",
     },
     {
       title: "Magnet Premium Large",
       size: "80 × 53 mm",
       description:
-        "Format dreptunghiular, perfect pentru imagini mai ample, colaje sau cadre reprezentative.",
+        "Format dreptunghiular premium, perfect pentru peisaje, colaje, locații turistice sau cadre reprezentative.",
       badge: "Premium Large",
       preview: "/images/80x53/m9.png",
     },
@@ -47,8 +62,7 @@ export default function ProdusePage() {
         {products.map((product) => (
           <div
             key={product.title}
-            className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
-          >
+            className="rounded-[2rem] border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
             <div className="mb-4 inline-flex rounded-full bg-neutral-900 px-3 py-1 text-xs font-medium text-white">
               {product.badge}
             </div>
@@ -63,11 +77,7 @@ export default function ProdusePage() {
 
             <div className="mt-6 flex items-center justify-center">
               <div
-                className={`relative overflow-hidden rounded-[1.5rem] border border-neutral-200 bg-white shadow-[0_18px_40px_rgba(0,0,0,0.12)] ${
-                  product.size === "80 × 53 mm"
-                    ? "h-[150px] w-[230px]"
-                    : "h-[210px] w-[210px]"
-                }`}
+                className={`relative overflow-hidden rounded-[1.5rem] border border-neutral-200 bg-white shadow-[0_18px_40px_rgba(0,0,0,0.12)] ${getSizeClass(product.size)}`}
               >
                 <div className="pointer-events-none absolute inset-0 z-10 rounded-[1.5rem] ring-1 ring-inset ring-white/40" />
 

@@ -4,96 +4,67 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function GaleriePage() {
+  const getPreviewSizeClass = (size: string) => {
+    if (size === "50x50") return "h-[220px] w-[220px]";
+    if (size === "63x63") return "h-[277px] w-[277px]"; // 220 * 1.26
+    if (size === "80x53") return "h-[233px] w-[352px]"; // proporțional
+    return "h-[220px] w-[220px]";
+  };
+  
   const galleryItems = [
     {
-      title: "Apus montan",
-      category: "Peisaj",
-      size: "80x53",
-      image: "/images/80x53/m1.png",
-    },
-    {
-      title: "Cuplu în natură",
-      category: "Nuntă",
-      size: "80x53",
-      image: "/images/80x53/m5.png",
-    },
-    {
-      title: "Botez bebe",
-      category: "Botez",
-      size: "50x50",
-      image: "/images/50x50/m2.png",
-    },
-    {
-      title: "Oraș european",
-      category: "Oraș",
-      size: "80x53",
-      image: "/images/80x53/m6.png",
-    },
-    {
-      title: "Nuntă cuplu",
-      category: "Nuntă",
-      size: "50x50",
-      image: "/images/50x50/m3.png",
-    },
-    {
-      title: "Stradă istorică",
-      category: "Oraș",
-      size: "80x53",
-      image: "/images/80x53/m7.png",
-    },
-    {
-      title: "Mamă și copil",
-      category: "Familie",
-      size: "50x50",
-      image: "/images/50x50/m4.png",
-    },
-    {
-      title: "Familie portret",
-      category: "Familie",
-      size: "80x53",
-      image: "/images/80x53/m2.png",
-    },
-    {
-      title: "Nuntă la apus",
-      category: "Nuntă",
-      size: "80x53",
-      image: "/images/80x53/m3.png",
-    },
-    {
-      title: "Dealuri și lumină",
-      category: "Peisaj",
-      size: "80x53",
-      image: "/images/80x53/m8.png",
-    },
-    {
-      title: "Generații în Familie",
-      category: "Familie",
+      title: "Magnet 50 × 50",
+      category: "Premium",
       size: "50x50",
       image: "/images/50x50/m1.png",
     },
     {
-      title: "Siluetă la apus",
-      category: "Nuntă",
-      size: "80x53",
-      image: "/images/80x53/m9.png",
-    },
-    {
-      title: "Lac natural",
-      category: "Turistic",
+      title: "Magnet 50 × 50",
+      category: "Premium",
       size: "50x50",
-      image: "/images/50x50/m5.png",
+      image: "/images/50x50/m2.png",
     },
     {
-      title: "Răsărit peste nori",
-      category: "Peisaj",
-      size: "80x53",
-      image: "/images/80x53/m10.png",
-    },
-    {
-      title: "Stațiune balneară",
-      category: "Turistic",
+      title: "Magnet 50 × 50",
+      category: "Premium",
       size: "50x50",
-      image: "/images/50x50/m6.png",
+      image: "/images/50x50/m3.png",
+    },
+    {
+      title: "Magnet 63 × 63",
+      category: "Premium",
+      size: "63x63",
+      image: "/images/63x63/m1.png",
+    },
+    {
+      title: "Magnet 63 × 63",
+      category: "Premium",
+      size: "63x63",
+      image: "/images/63x63/m2.png",
+    },
+    {
+      title: "Magnet 63 × 63",
+      category: "Premium",
+      size: "63x63",
+      image: "/images/63x63/m3.png",
+    },
+    {
+      title: "Magnet 80 × 53",
+      category: "Premium Large",
+      size: "80x53",
+      image: "/images/80x53/m1.png",
+    },
+    {
+      title: "Magnet 80 × 53",
+      category: "Premium Large",
+      size: "80x53",
+      image: "/images/80x53/m2.png",
+    },
+    {
+      title: "Magnet 80 × 53",
+      category: "Premium Large",
+      size: "80x53",
+      image: "/images/80x53/m3.png",
     },
   ];
 
@@ -104,6 +75,18 @@ export default function GaleriePage() {
     filter === "all"
       ? galleryItems
       : galleryItems.filter((item) => item.size === filter);
+
+  const getSizeLabel = (size: string) => {
+    if (size === "50x50") return "50 × 50 mm";
+    if (size === "63x63") return "63 × 63 mm";
+    if (size === "80x53") return "80 × 53 mm";
+    return size;
+  };
+
+  const getAspectClass = (size: string) => {
+    if (size === "80x53") return "aspect-[80/53]";
+    return "aspect-square";
+  };
 
   const closeModal = () => setSelectedIndex(null);
 
@@ -144,54 +127,33 @@ export default function GaleriePage() {
           Exemple de magneți realizați
         </h1>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-neutral-600 md:text-base">
-          Exemple reale de magneți personalizați realizați pentru familie,
-          botez, nuntă și modele turistice, disponibile în formatele 50 × 50 mm
-          și 80 × 53 mm.
+          Exemple de magneți personalizați disponibili în formatele premium
+          50 × 50 mm, 63 × 63 mm și 80 × 53 mm.
         </p>
       </div>
 
       <div className="mb-8 flex flex-wrap gap-3">
-        <button
-          onClick={() => {
-            setFilter("all");
-            setSelectedIndex(null);
-          }}
-          className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-            filter === "all"
-              ? "border-neutral-900 bg-neutral-900 text-white"
-              : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500"
-          }`}
-        >
-          Toate
-        </button>
-
-        <button
-          onClick={() => {
-            setFilter("50x50");
-            setSelectedIndex(null);
-          }}
-          className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-            filter === "50x50"
-              ? "border-neutral-900 bg-neutral-900 text-white"
-              : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500"
-          }`}
-        >
-          50 × 50
-        </button>
-
-        <button
-          onClick={() => {
-            setFilter("80x53");
-            setSelectedIndex(null);
-          }}
-          className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-            filter === "80x53"
-              ? "border-neutral-900 bg-neutral-900 text-white"
-              : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500"
-          }`}
-        >
-          80 × 53
-        </button>
+        {[
+          { label: "Toate", value: "all" },
+          { label: "50 × 50", value: "50x50" },
+          { label: "63 × 63", value: "63x63" },
+          { label: "80 × 53", value: "80x53" },
+        ].map((item) => (
+          <button
+            key={item.value}
+            onClick={() => {
+              setFilter(item.value);
+              setSelectedIndex(null);
+            }}
+            className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+              filter === item.value
+                ? "border-neutral-900 bg-neutral-900 text-white"
+                : "border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500"
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -202,13 +164,14 @@ export default function GaleriePage() {
             onClick={() => setSelectedIndex(index)}
             className="overflow-hidden rounded-[2rem] border border-neutral-200 bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
-            <div
-              className={`relative overflow-hidden bg-neutral-100 ${
-                item.size === "80x53" ? "aspect-[80/53]" : "aspect-square"
-              }`}
-            >
+            <div className="flex min-h-[340px] items-center justify-center bg-neutral-50 p-6">
+              <div
+                className={`relative overflow-hidden rounded-[1.5rem] bg-neutral-100 shadow-[0_18px_40px_rgba(0,0,0,0.12)] ${getPreviewSizeClass(
+                  item.size
+                )}`}
+              >
               <span className="absolute right-3 top-3 z-10 rounded-full bg-black/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
-                {item.size === "50x50" ? "50×50 mm" : "80×53 mm"}
+                {getSizeLabel(item.size)}
               </span>
 
               <Image
@@ -217,6 +180,7 @@ export default function GaleriePage() {
                 fill
                 className="object-cover transition duration-500 hover:scale-105"
               />
+              </div>
             </div>
 
             <div className="p-5">
@@ -291,18 +255,14 @@ export default function GaleriePage() {
                 </div>
 
                 <span className="rounded-full bg-white/10 px-3 py-1 text-sm font-medium backdrop-blur">
-                  {filteredItems[selectedIndex].size === "50x50"
-                    ? "50 × 50 mm"
-                    : "80 × 53 mm"}
+                  {getSizeLabel(filteredItems[selectedIndex].size)}
                 </span>
               </div>
 
               <div
-                className={`relative w-full overflow-hidden rounded-3xl bg-white/5 shadow-2xl ${
-                  filteredItems[selectedIndex].size === "80x53"
-                    ? "aspect-[80/53]"
-                    : "aspect-square"
-                }`}
+                className={`relative w-full overflow-hidden rounded-3xl bg-white/5 shadow-2xl ${getAspectClass(
+                  filteredItems[selectedIndex].size
+                )}`}
               >
                 <Image
                   src={filteredItems[selectedIndex].image}
